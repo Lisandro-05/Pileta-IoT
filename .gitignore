@@ -1,0 +1,15 @@
+# Bases de datos
+*.db
+*.sqlite
+*.sql
+
+# Logs
+*.log
+
+# Archivos de backup
+*.bak
+*.old
+*.save
+
+# Archivo gitignore
+*..gitignore

@@ -1,0 +1,1 @@
+## Se configuró el "host = 'Pileta1'" ya que si se quieren agregar más sensores, se hace un tópico MQTT nuevo y se le da el host de "Pileta2" para que en el grafana se muestren los dos a la vez.
