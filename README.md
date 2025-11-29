@@ -1,12 +1,14 @@
-# Pileta IoT 💧 - Sistema de Monitoreo Inteligente
+<h1 align="center">Pileta IoT 💧 - Sistema de Monitoreo Inteligente</h1>
 
-Sistema IoT completo para el monitoreo en tiempo real de parámetros de calidad de agua en piscinas y/o piletas. Desarrollado como proyecto de la materia **Práctica Profesionalizante I** del **ISPC de Córdoba**.
+<div align="center">
+       Sistema IoT completo para el monitoreo en tiempo real de parámetros de calidad de agua en piscinas y/o piletas. Desarrollado como proyecto de la materia **Práctica Profesionalizante I** del **ISPC de Córdoba**.
+</div>
 
-## 📋 Descripción
+## Descripción
 
 Este proyecto implementa una solución integral de monitoreo IoT que permite supervisar continuamente los parámetros críticos de calidad del agua de piletas mediante sensores conectados a un ESP32, almacenamiento de datos en tiempo real y visualización mediante dashboards interactivos.
 
-## ⚙️ Características Principales
+## Características Principales
 
 - **Monitoreo en Tiempo Real**: Lectura continua de pH, temperatura y TDS (Total Dissolved Solids)
 - **Comunicación MQTT**: Arquitectura basada en mensajería pub/sub para comunicación asíncrona
@@ -16,7 +18,7 @@ Este proyecto implementa una solución integral de monitoreo IoT que permite sup
 - **Simulador de Datos**: Herramienta para pruebas sin hardware físico
 - **Docker Compose**: Despliegue simplificado con contenedores
 
-## 🏗️ Arquitectura del Sistema
+## Arquitectura del Sistema
 
 ```
 ┌─────────────┐
@@ -33,7 +35,7 @@ Este proyecto implementa una solución integral de monitoreo IoT que permite sup
        └──► Telegraf ──► InfluxDB ──► Grafana
 ```
 
-## 🧩 Componentes
+## Componentes
 
 ### Hardware
 - **ESP32 NodeMCU**: Microcontrolador con WiFi integrado
@@ -48,13 +50,13 @@ Este proyecto implementa una solución integral de monitoreo IoT que permite sup
 - **Grafana 11.2.0**: Plataforma de visualización y análisis
 - **Simulador Python**: Generador de datos de prueba
 
-## 📦 Requisitos Previos
+## Requisitos Previos
 
 - Docker y Docker Compose instalados
 - Git
 - (Opcional) PlatformIO para compilar el firmware del ESP32
 
-## 🚀 Instalación y Configuración
+## Instalación y Configuración
 
 ### 1. Clonar el Repositorio
 
@@ -85,7 +87,7 @@ Esto iniciará todos los servicios:
 2. Iniciá sesión con las credenciales del `.env`
 3. El dashboard de Pileta se cargará automáticamente
 
-## 🔧 Configuración del ESP32
+## Configuración del ESP32
 
 ### Compilar y Subir el Firmware
 
@@ -113,7 +115,7 @@ pio run -t upload
 El ESP32 se reiniciará y comenzará a enviar datos al broker MQTT cada 5 segundos.  
 ***Nota:** Los datos no son persistentes por el estado actual del proyecto (desarrollo).*
 
-## 📊 Uso del Simulador
+## Uso del Simulador
 
 Si no tenés hardware físico, podés usar el simulador:
 
@@ -123,7 +125,7 @@ docker-compose up lecture-simulator
 
 El simulador generará datos de prueba y los publicará en el tópico `pool/metrics`.
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 pileta-iot-test/
@@ -148,7 +150,7 @@ pileta-iot-test/
 └── README.md               # Este archivo
 ```
 
-## 🔌 Tópicos MQTT
+## Tópicos MQTT
 
 - **`pool/metrics`**: Tópico donde se publican las métricas con el siguiente formato:
 
@@ -163,7 +165,7 @@ pileta-iot-test/
 }
 ```
 
-## 🛠️ Resumen de las Tecnologías Utilizadas
+## Resumen de las Tecnologías Utilizadas
 
 - **Hardware**: ESP32, Sensores Atlas Scientific
 - **Protocolo**: MQTT
@@ -174,18 +176,18 @@ pileta-iot-test/
 - **Lenguajes**: C++ (Arduino), Python
 - **Orquestación**: Docker Compose
 
-## 📈 Métricas Monitoreadas
+## Métricas Monitoreadas
 
 - **pH**: Rango óptimo 7.2 - 7.8
 - **Temperatura**: Monitoreo en grados Celsius
 - **TDS**: Sólidos disueltos totales en ppm (partes por millón)
 - **Tendencia**: Indicador de estabilidad de los parámetros
 
-## 👀 Imágenes
+## Imágenes
 
 ![Grafana funcionando](/resources/Grafana.png)
 ![Página de conexión ESP](/resources/Pagina-ESP32.png)
 
-## 👥 Autores
+## Autores
 
 - **Lisandro Juncos** - *Desarrollo inicial* - [Github](https://github.com/Lisandro-05)
